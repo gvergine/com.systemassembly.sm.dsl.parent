@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: com.systemassembly.sm.dsl.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: com.systemassembly.sm.dsl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.systemassembly.sm.dsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.systemassembly.sm.dsl,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.systemassembly.sm.dsl.ide.contentassist.antlr.internal,
+ com.systemassembly.sm.dsl.ide.contentassist.antlr
