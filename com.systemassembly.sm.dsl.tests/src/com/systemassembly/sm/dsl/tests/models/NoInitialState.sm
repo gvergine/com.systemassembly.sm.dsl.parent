@@ -1,0 +1,17 @@
+name NoInitialState
+
+events {
+}
+
+commands {
+}
+
+state one {
+}
+
+
+state two {
+}
+
+state three {
+}

@@ -1,0 +1,57 @@
+name BlinkingLight
+
+events {
+	toggle
+	timeout
+}
+
+commands {
+    turn_light_on
+    turn_light_off
+    start_timer
+    stop_timer
+}
+
+initial state disabled {
+	on entry {
+		exec stop_timer
+	}
+	
+	on toggle {
+		goto enabled_light_on
+	}
+	
+	on exit {
+		exec start_timer
+	}
+}
+
+
+state enabled_light_on {
+	on entry {
+		exec turn_light_on
+	}
+	
+	on toggle {
+		exec turn_light_off
+		goto disabled
+	}
+	
+	on timeout {
+		goto enabled_light_off
+	}
+}
+
+state enabled_light_off {
+	on entry {
+		exec turn_light_off
+	}
+	
+	on toggle {
+		goto disabled
+	}
+	
+	on timeout {
+		goto enabled_light_on
+	}
+}

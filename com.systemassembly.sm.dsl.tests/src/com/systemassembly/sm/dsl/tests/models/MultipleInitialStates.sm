@@ -1,0 +1,16 @@
+name MultipleInitialStates
+
+events {
+}
+
+commands {
+}
+
+state one {
+}
+
+initial state two {
+}
+
+initial state three {
+}

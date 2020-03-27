@@ -1,0 +1,20 @@
+name UnreachableStates
+
+events {
+    event_one
+}
+
+commands {
+}
+
+initial state one {
+    on event_one {
+        goto two
+    }
+}
+
+state two {
+}
+
+state three {
+}
