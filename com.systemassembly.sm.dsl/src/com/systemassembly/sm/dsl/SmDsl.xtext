@@ -5,9 +5,8 @@ generate smDsl "http://www.systemassembly.com/sm/dsl/SmDsl"
 Model:
 	'name' name=ID
 	eventsSection=EventsSection
-	statesSection=StatesSection
 	commandsSection=CommandsSection
-	stateDescriptions+=StateDescription*
+	states+=State*
 	;
 
 	
@@ -21,15 +20,6 @@ Event:
 	name=ID
 ;
 
-StatesSection:
-	{StatesSection} 'states' '{'
-	states+=State*
-	'}'
-;
-
-State:
-	name=ID
-;
 
 CommandsSection:
 	{CommandsSection} 'commands' '{'
@@ -43,8 +33,8 @@ Command:
 ;
 
 
-StateDescription:
-	initial?='initial'? 'state' state=[State] '{'
+State:
+	initial?='initial'? 'state' name=ID '{'
 	('on' 'entry' '{'
 	('exec' entryCommands+=[Command] (',' entryCommands+=[Command])*)?
 	'}')?
