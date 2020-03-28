@@ -1,11 +1,16 @@
 ![CI](https://github.com/gvergine/com.systemassembly.sm.dsl.parent/workflows/Java%20CI%20with%20Maven/badge.svg)
 # SmDsl
 SmDsl is a state machine domain-specific language that comes with a code generator that produces MISRA-C 2012 compliant source code. The code generated does not have any dependencies.
+SmDsl comes in form of Eclipse plugin. You can find the latest release of the pluging using the following eclipse update site url:
+
+`https://dl.bintray.com/gvergine/SmDsl/`
 
 # License
 SmDsl is Free Software, released under GPLv3 license.
 
 # Build instructions
+If you want to build the eclipse plugin yourself, follow the commands:
+
 ```
 git clone https://github.com/gvergine/com.systemassembly.sm.dsl.parent
 cd com.systemassembly.sm.dsl.parent
@@ -85,7 +90,4 @@ As you may have noticed, each state can execute commands on entry, on exit and o
 
 One and only one of the states has to be marked `initial`.
 
-# Build artifacts
-* SmDsl Command Line tool
-* SmDsl Eclipse Repository
 
