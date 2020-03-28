@@ -18,7 +18,10 @@ Here is a comprehensive example of a blinking light system, that could be off (s
 The events that make the state to change are `toggle` (to enable or disable the system) and `timeout`, that could be spawned by a periodic timer.
 The commands that the user should fill in order the system to produce an effect are `turn_light_on` and `turn_light_off` (e.g. writing ones and zeros on a GPIO pin), `start_timer` and `stop_timer` (start and stop a system-dependent periodic timer).
 
+![BlinkingLight.png](https://drive.google.com/file/d/1WzMJG49tQKOeZsO23N3LzqhbRNfrQM68/view?usp=sharing)
+
 Here is how `BlinkingLight.sm` could look like:
+
 
 ```
 name BlinkingLight
