@@ -81,7 +81,7 @@ state enabled_light_off {
 
 As you may have noticed, each state can execute commands on entry, on exit and on events, using the keyword `exec`. It is possible to perform a state transition only on events, using the keyword `goto`.
 
-One and only one of the states have to be marked `initial`.
+One and only one of the states has to be marked `initial`.
 
 # Build artifacts
 * SmDsl Command Line tool
