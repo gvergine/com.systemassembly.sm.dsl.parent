@@ -24,8 +24,8 @@ Here is how `BlinkingLight.sm` could look like:
 name BlinkingLight
 
 events {
-	toggle
-	timeout
+    toggle
+    timeout
 }
 
 commands {
@@ -36,51 +36,50 @@ commands {
 }
 
 initial state disabled {
-	on entry {
-		exec stop_timer
-	}
-	
-	on toggle {
-		goto enabled_light_on
-	}
-	
-	on exit {
-		exec start_timer
-	}
+    on entry {
+        exec stop_timer
+    }
+
+    on toggle {
+        goto enabled_light_on
+    }
+
+    on exit {
+        exec start_timer
+    }
 }
 
-
 state enabled_light_on {
-	on entry {
-		exec turn_light_on
-	}
-	
-	on toggle {
-		exec turn_light_off
-		goto disabled
-	}
-	
-	on timeout {
-		goto enabled_light_off
-	}
+    on entry {
+        exec turn_light_on
+    }
+
+    on toggle {
+        exec turn_light_off
+        goto disabled
+    }
+
+    on timeout {
+        goto enabled_light_off
+    }
 }
 
 state enabled_light_off {
-	on entry {
-		exec turn_light_off
-	}
-	
-	on toggle {
-		goto disabled
-	}
-	
-	on timeout {
-		goto enabled_light_on
-	}
+    on entry {
+        exec turn_light_off
+    }
+
+    on toggle {
+        goto disabled
+    }
+
+    on timeout {
+        goto enabled_light_on
+    }
 }
 ```
 
-As you may have noticed, each state can execute commands on entry, on exit and on events, using the keyword `exec`. It is possible to perform a state transition only on events, using the keyword `goto`. The choice of the keyword `goto` is done on purpose as tribute to such maligned keyword in C.
+As you may have noticed, each state can execute commands on entry, on exit and on events, using the keyword `exec`. It is possible to perform a state transition only on events, using the keyword `goto`.
 
 # Build artifacts
 * SmDsl Command Line tool
