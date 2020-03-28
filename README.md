@@ -1,7 +1,7 @@
 ![CI](https://github.com/gvergine/com.systemassembly.sm.dsl.parent/workflows/Java%20CI%20with%20Maven/badge.svg)
 # SmDsl
 SmDsl is a state machine domain-specific language that comes with a code generator that produces MISRA-C 2012 compliant source code. The code generated does not have any dependencies.
-SmDsl comes in form of Eclipse plugin. You can find the latest release of the pluging using the following eclipse update site url:
+SmDsl comes in form of Eclipse plugin. You can use the latest release of the plugin using the following eclipse update site url:
 
 `https://dl.bintray.com/gvergine/SmDsl/`
 
